@@ -1,5 +1,5 @@
 {
-    "name": "club-calendar-view-server",
+    "name": "tams-club-cal-server",
     "version": "1.1.0",
     "description": "Backend for the calendar app",
     "main": "index.js",
@@ -9,12 +9,18 @@
     ],
     "license": "MIT",
     "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
-        "googleapis": "^61.0.0",
+        "mongodb": "^3.6.3",
         "node-cron": "^2.0.3"
     },
     "scripts": {
-        "start": "node src/app.js"
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
     }
 }

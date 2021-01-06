@@ -1,0 +1,17 @@
+@import '../custom.scss';
+
+.LinkBox {
+    border: 0.1rem solid black;
+    padding: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.3s;
+    background-color: $background;
+}
+
+.LinkBox:hover {
+    cursor: pointer;
+    // TODO: Does the background color change or drop shadow look better?
+    background-color: $background-tint;
+    // filter: drop-shadow(0 0 0.1rem #777777);
+}

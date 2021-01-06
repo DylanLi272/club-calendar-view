@@ -1,39 +1,52 @@
-# TAMS Club Calendar
+# TAMS Club Calendar [WIP]
+
+## Development Information
+
+Check out the [old-site branch](https://github.com/MichaelZhao21/club-calendar-view/tree/old-site) for the current version deployed on the [tams.club](https://tams.club) website. The new version in development is currently being hosted at [test.tams.club](https://test.tams.club). CI/CD is being developed through Github Actions and hopefully will be avaliable soon!
+
+[Here's the document](https://docs.google.com/document/d/1U_zqoEiplk0ODeGdMTzK1aLhz9OYFQV0FlhSI52VSBo) for all the ideas, planning, and other notes for this project.
+
+## Contribution
+
+*// TODO: this section*
 
 ## Setup
 
-Create a [Google Cloud project](https://console.cloud.google.com/) and create a project, enabling the Google Drive, Google Sheets, and Google Calendar APIs. Generate a service account and download the config file. You will use the `client_email` and `private_key` fields. Add the following to the environmental variables (`server/.env`) file (use quotation marks around the variables eg. `SHEET_ID="234fn321iHUeeZX329ff2_TXE"`):
-
-```
-PRIVATE_KEY=[enter the private key from the config file]
-CLIENT_EMAIL=[enter the client email from the config file]
-PORT=[(optional) port number - default is 5000]
-TEST=[(optional) "true" if it's testing environment]
+```bash
+git clone https://github.com/MichaelZhao21/tams-club-cal.git
+cd tams-club-cal/client && yarn install
+cd ../server && yarn install
 ```
 
-The `server/src/data.json` file contains a lot of the links and constants that are used. 
+Create the config file at `client/src/files/config.json` (**For the `backend` field, don't put a `/` after**):
 
-Install packages in both the `client` and `server` folders with `yarn install` (you need to do it twice in both folders)
+```json
+{
+    "backend": "[address that the backend server is hosted on (eg. http://localhost:5000)]"
+}
+```
+
+If you would like to help develop the backend, email or message [MichaelZhao21](https://github.com/MichaelZhao21) to get access to the database. If are just developing frontend, you can simply use `https://api.tams.club` as the backend address in the json file and only run the frontend (`client` folder). You will not need to do the following step if you are only developing frontend.
+
+Create the environmental variable file at `server/.env`:
+
+```.env
+MONGO_USER="[Username for cluster]"
+MONGO_PASS="[Password for cluster]"
+```
 
 ## Execution
 
-Simply type `yarn start` to run the program
+To run the client:
 
-## TODO
+```bash
+cd client
+yarn start
+```
 
-- Remove the .then() on api calls and move the info into the outer async functions
-- Add info for how to contribute
-- Add error checking on ALL API CALLS (just add a `.catch(console.error)` after those functions)
-  - Also add lots of checks for undefined behavior
-  - Verify if the incoming POST request from google is actually valid
-- Add html metadata and SEO stuff
-- Design favicon!
-- Better looking homepage
-- Have only the upcoming events and pull from cal when ppl load the page
-  - Add cache for cal events so only when it updates do we pull
-  - So ig to that extent, we need to add a [webhook](https://developers.google.com/calendar/v3/reference/events/watch) to check for when calendar gets updated
-  - Also prob refersh the cache every day or smth just in case
-- Extract `[${now.toISOString()}] message` to function, where `now` is `new Date()`
-- Change address to use the process variable instead of hardcoding it in the `createWebhookChannel` function
-- Add the webhook info to a file (JSON prob) and have the program stop it and create a new one upon restarting
-- Update manifest
+To run the server:
+
+```bash
+cd server
+yarn start
+```

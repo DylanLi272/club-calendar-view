@@ -1,0 +1,91 @@
+@import '../custom.scss';
+
+.schedule-view, .calendar-view {
+    display: none;
+}
+
+.schedule-view {
+    margin: 0 8rem;
+}
+
+.schedule-view > .ScheduleEvent:hover {
+    cursor: pointer;
+    background-color: $background-tint;
+}
+
+$grid-border: 0.025rem solid black;
+$rh: 5rem;
+
+.calendar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto $rh $rh $rh $rh $rh;
+    border-bottom: $grid-border;
+    margin: 1rem 4rem;
+}
+
+.calendar > .CalendarDay {
+    border: 0;
+    border-top: $grid-border;
+    border-left: $grid-border;
+}
+
+.CalendarDay:nth-child(7n) {
+    border-right: $grid-border;
+}
+
+.days-of-week {
+    text-align: center;
+}
+
+.view-active {
+    display: block;
+}
+
+// TODO: Change this thing to a flexbox
+
+.month-year {
+    text-align: center;
+}
+
+.view-switch {
+    font-family: $main-font;
+    background-color: $background;
+    border: 0.1rem solid black;
+    padding: 0.1rem 0.25rem;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    transition: 0.2s;
+}
+
+.view-switch:hover {
+    cursor: pointer;
+    background-color: $background-tint;
+}
+
+.home-top {
+    padding: 1.25rem 0 0.25rem 0;
+    margin: 0 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dummy {
+    width: 7rem;
+}
+
+@media handheld and (max-width: 992px),
+screen and (max-device-width: 992px),
+screen and (max-width: 992px) {
+    .schedule-view {
+        margin: 0 4rem;
+    }
+}
+
+@media handheld and (max-width: 652px),
+screen and (max-device-width: 652px),
+screen and (max-width: 652px) {
+    .schedule-view {
+        margin: 0;
+    }
+}
