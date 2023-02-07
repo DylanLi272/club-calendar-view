@@ -1,0 +1,433 @@
+{
+    "daysOfTheWeek": ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"],
+    "charsOfTheWeek": ["S", "M", "T", "W", "T", "F", "S"],
+    "githubLink": "https://github.com/MichaelZhao21/tams-club-cal",
+    "aboutText": "Welcome to the TAMS Club Calendar! This is a simple web app that displays all the student organization events at TAMS, along with a list of clubs and other resources. Our vision is a community-maintained resource that’s available to anyone and can be updated by anyone as well.\nWe are an open-source project, meaning that anyone and everyone can help contribute to the development of the website! You can go to the Github repository where this project is being hosted, where there's more information on that page about how to contribute and help code. If you can't code and still want to help, there is a feedback form below where you can write whatever you would like! The way programs like these get better, after all, is through independent user feedback. Thank you once again for checking out tams.club, and we hope you enjoy the rest of your day! :D",
+    "aboutFeedback": "We would love to hear what you think and what ideas you would like to see! Here’s the form for any bugs, comments, suggestions, and anything else you would like us to know!",
+    "hours": [
+        "6a",
+        "7a",
+        "8a",
+        "9a",
+        "10a",
+        "11a",
+        "12",
+        "1p",
+        "2p",
+        "3p",
+        "4p",
+        "5p",
+        "6p",
+        "7p",
+        "8p",
+        "9p",
+        "10p"
+    ],
+    "rooms": [
+        {
+            "value": "room-mac",
+            "label": "[Room] Mac Cafe"
+        },
+        {
+            "value": "tabling-mac",
+            "label": "Tabling in Mac"
+        },
+        {
+            "value": "room-smitty",
+            "label": "[Room] Smitty"
+        },
+        {
+            "value": "room-conference",
+            "label": "[Room] Conference"
+        },
+        {
+            "value": "room-sac",
+            "label": "[Room] SAC"
+        },
+        {
+            "value": "room-computer",
+            "label": "[Room] Computer Lab"
+        },
+        {
+            "value": "room-tv",
+            "label": "[Room] TV Room"
+        },
+        {
+            "value": "room-bewley",
+            "label": "[Room] Bewley"
+        },
+        {
+            "value": "room-kitchenette",
+            "label": "[Room] Kitchenette"
+        },
+        {
+            "value": "mac-park",
+            "label": "Mcconnell Park Area"
+        },
+        {
+            "value": "zoom",
+            "label": "Online Event"
+        },
+        {
+            "value": "van-382",
+            "label": "[Van] #382"
+        },
+        {
+            "value": "van-383",
+            "label": "[Van] #383"
+        },
+        {
+            "value": "van-384",
+            "label": "[Van] #384"
+        },
+        {
+            "value": "van-386",
+            "label": "[Van] #386"
+        },
+        {
+            "value": "van-387",
+            "label": "[Van] #387"
+        },
+        {
+            "value": "van-380",
+            "label": "[Van] #380 (mini)"
+        },
+        {
+            "value": "van-388",
+            "label": "[Van] #388 (truck)"
+        }
+    ],
+    "howToUse": [
+        {
+            "section": "General",
+            "text": "The TAMS Club Calendar is organized into 3 main resource types: events, volunteering, and clubs. For the most part, TAMS students would use the schedule and calendar views to see upcoming club events. Club execs would use the events section to create and edit their clubs events, as well as make room reservations. Volunteering and club resources are provided as a reference for students who want to familiarize themselves with or find new clubs/volunteering."
+        },
+        {
+            "section": "Events",
+            "text": "The schedule view of events is the home page of the site. When the user enters for the first time, they are greeted by a list of upcoming events. The sidebar on the home page can be used to access certain external links, such as an exam calendar or club leader resources. The navbar at the very top is used to navigate to other sections of the site. The view switcher floating above the event list can be used to switch to calendar or reservation views.\nWhen the user clicks on a specific event, they are taken to a separate event info page that displays more information about the event in an easier-to-read format. The event card contains the type of event, the event name, the club associated with the event, the location, the description, and the start/end times. For repeating events, there is a note regarding how long the event will repeat for. \nThe calendar view will display all events, including past events, in a calendar-like view. You can click on specific days to see what events are happening on those days, as most boxes don’t fit the amount of things on those days!\nFinally, the reservation view is specifically for reservations. When creating events, you may select that an event ONLY be displayed on the reservation calendar. This way, it won’t show up on the public calendar or event list, but will show up as a room reservation (preventing people from reserving the room as well)."
+        },
+        {
+            "section": "Creating and Editing Events",
+            "text": "On the home page, there is a green add button at the bottom right. This can be clicked on to add an event. You must log in to create an event, but anyone is free to create an event once logged in. A form will appear to enter your event details. The location refers to the room and will create a reservation (see below). Events by default are private and are not displayed on the schedule view. This is because many “events” are simply room reservations. The system is designed so clubs can create a repeating room reservation in advance and change it to a public event later.\nIf you have created an event, you can edit that event by clicking on the orange edit button on the event info page for that event. This will only show up if it is an event you have created yourself. Make the necessary changes and press “Submit” to update your event.\nRepeating events can be created by checking the “Repeats Weekly” box on an event. There is currently no way to change an existing non-repeating event to repeat weekly. Once you have selected “Repeats Weekly”, a date picker will appear, allowing you to choose how long your event repeats for. There is technically no limit on the number of repeated instances you may have, but be considerate of everyone else using the site.\nWhen editing repeating events, you may either edit all repeating instances (such as changing the name of all the repetitions) or edit a single instance (if we need to change the time of only one week). If a repeating instance is edited individually, it will be “detached” from the other repeating instances. That means that editing “all repeating instances” will not edit the “detached” instance. This is the most efficient implementation of a repeating system that still allows for significant repeating event capabilities. You may also delete individual repeating events or delete all instances of a repeating event."
+        },
+        {
+            "section": "Reservations",
+            "text": "Events that have the location specified to a room (and not “Other”) will have a reservation created for it. These reservations can be found on the reservation calendar, which is an hourly view of all rooms, where each table represents a single day of the week. Note that this is accessed through the view switcher at the top of the home page. The graphical layout of the calendar is to help club execs and organizers decide where and when to plan their events.\nYou may also click on a room on the left-hand side of the reservation calendar to see the events that are happening in that specific room. The room-specific reservation calendar will display all events in that room across the span of a month.\nIf a room is reserved in a specific time slot and other events wish to reserve that room in the same time slot, the later organizer will get an error when creating their event. If you are trying to create an event that overlaps a pre existing event, you should discuss the issue with the creator of the first event. There is currently no priority system on reservations, and we rely on students to maintain an equitable reservation system."
+        },
+        {
+            "section": "Volunteering",
+            "text": "The volunteering page simply shows all current volunteering opportunities. The default view is a grid of cards, each of which displays the information for a single volunteering opportunity. Volunteering opportunities can be set to open or closed, depending on availability. The key feature of volunteering cards are the 4 possible filters that the user can choose to show. These are “limited spots”, “semester-long commitment”, “set time slots”, and “repeats weekly”. On the grid view, these cards can easily be filtered by said filters, as well as sorted by name or club name alphabetically."
+        },
+        {
+            "section": "Clubs",
+            "text": "The clubs page shares much of the functionality from the main volunteering page, with a grid view of all clubs. However, the club page will also display a thumbnail of each club’s banner. Clicking on a club card will bring the user to a more detailed view of the club’s information. At the top, the club’s name and banner are proudly displayed. The club description and list of links are listed below that. The tab switcher at the bottom will switch between execs and committees tabs, which will show cards for each exec and committee. Execs can write a short bio about themselves and attach a profile picture. Committees can have a title, description, and external links."
+        },
+        {
+            "section": "General Editing and Edit History",
+            "text": "All resource main pages (events, clubs, and volunteering) have a floating action button on the bottom right of the screen, which the user can press to create a new resource of that type. Users are also able to go to the main edit page and see a list of buttons that will take them to the same creation page. When viewing a specific resource, the add button changes to an edit icon button. Clicking this will allow the user to edit the given resource.\nNot all resources can be created/edited by all users. There are certain access levels that guarantee a more secure site. By default, all logged in users have a “standard” access level and can create/edit events. However, you may only edit and delete events that you have created yourself. There is also a “clubs” and “admin” access level, which have more permissions such as editing clubs/volunteering resources.\nWhen editing a resource, you also have the option to delete that resource. This is done by clicking on the red “Delete [Resource]” button at the bottom right corner of the page. A popup will appear warning you that deletion is irreversible. Click “Delete” once again to confirm and delete the event.\nThe main edit page will also show a list of recent edits made across the site. Clicking on one of these links will bring you to a list of all edits made to that specific resource. This page can also be accessed when editing the resource via the “Show Edit History” button on the bottom left corner. Each edit made will show the previous data state compared to the new data state, essentially showing what has changed and the before/after of those fields."
+        },
+        {
+            "section": "About Page",
+            "text": "The about page contains, first and foremost, the site banner and a short blurb describing the site. Below that, there is a feedback form that anyone can submit to the admins. The text you are currently reading, “How to Use”, follows the feedback form. At the bottom, there is a changelog, detailing each release’s date and what was changed in each release."
+        },
+        {
+            "section": "User/Admin Dashboard",
+            "text": "Finally, the user dashboard is available to all users that are logged into the system. You are able to see your stored information at the top of the dashboard. There is a button to log out of the site if you wish to switch accounts. At the bottom, there is a list of all events you have made, and you can click on each event to go to its detailed view.\nThe admin dashboard is accessible through a button that will only show up on the dashboard if the user has the “admin” access level. The dashboard contains 4 main sections. The first is a place to edit/add/remove external links. The second is a tabular view of all resources across the site. The third is a place to manage user access levels. The final section contains all the feedback collected from users."
+        }
+    ],
+    "changelog": [
+        {
+            "v": "6.3",
+            "date": "August 16, 2022",
+            "changes": [
+                "Removed support for Google Calendar integration",
+                "Optimized the repeating events system (faster creation and editing)",
+                "Fixed issue where empty history entries were being added to the edit history",
+                "Renamed the \"private\" checkbox on edit events to \"Show on Calendar\"",
+                "Clarified resolutions of the error about private events with no reservations",
+                "Changed color of events that are not public on the reservation calendar",
+                "Added ability to see user-created events on the user's profile",
+                "Completed the \"How to Use\" section",
+                "Renamed save button on admin edit links",
+                "Replaced \"Invalid token\" with \"Stale token\" text on login page for invalid token",
+                "Sort feedback display on admin dashboard by descending time"
+            ]
+        },
+        {
+            "v": "6.2.1",
+            "date": "August 11, 2022",
+            "changes": [
+                "Changed the \"editAll\" checkbox to a significantly more intuitive popup when editing repeating events",
+                "Added the ability to edit start/end times for repeating events",
+                "Added checking for overlapping events when editing repeating events",
+                "Added the \"start\" and \"end\" word to event display cards that span multiple days",
+                "Added the location to the event list"
+            ]
+        },
+        {
+            "v": "6.2",
+            "date": "August 9, 2022",
+            "changes": [
+                "Added a simpler repeating events system",
+                "Fixed typo on about page",
+                "Fixed club/type/description line of event list",
+                "Modified club access level permissions to add and delete clubs",
+                "Remove board room from reservation list"
+            ]
+        },
+        {
+            "v": "6.1",
+            "date": "July 12, 2022",
+            "changes": [
+                "Completely rewrote the reservation calendar with divs that display finer (minute) detail on reservations",
+                "Reservations can now be made down to the minute",
+                "Fixed issue where login token cookies were not being saved",
+                "Added new colors for light theme",
+                "Added back event type with a dropdown in the edit menu",
+                "Added the ability to filter events by event type",
+                "Added a loading screen to the home page",
+                "Fixed invalid pagination on the admin page",
+                "Clicking on an edit entry on /edit will now open the popup with those specific edits",
+                "Reworded the checkbox to create a private (non-public) event"
+            ]
+        },
+        {
+            "v": "6.0",
+            "date": "June 13, 2022",
+            "changes": [
+                "Updated icons on external links",
+                "Added ability to edit external links on the admin dashboard",
+                "Fixed spelling mistake on the add button",
+                "Added access level system for all users",
+                "Added ability to edit access levels on the admin dashboard",
+                "Fixed glitches with the login button",
+                "Profile button now links to /profile/dashboard",
+                "Added delete buttons to resource edit pages",
+                "Added dialog explaining access levels on the edit main page",
+                "Added ability to view feedback on the admin dashboard",
+                "Removed repeating events",
+                "Added the ability to create duplicates of existing events",
+                "Location names now display nicely on the edit history"
+            ]
+        },
+        {
+            "v": "5.4",
+            "date": "May 27, 2022",
+            "changes": ["Created new Github workflows", "Updated many internal components"]
+        },
+        {
+            "v": "5.3",
+            "date": "May 24, 2022",
+            "changes": [
+                "Fixed issue where favicon was not displaying",
+                "Fixed issue where meta tags did not update correctly",
+                "Calendar popup now shows when clicking anywhere on a calendar day",
+                "Fixed issue where calendar events were not highlighted correctly"
+            ]
+        },
+        {
+            "v": "5.2",
+            "date": "March 9, 2022",
+            "changes": [
+                "Added computer lab as a reservable room, as well as a reservation for tabling in Mac",
+                "Removed redundant 'Add Reservation' button on the edit page",
+                "Fixed random icon flash on page load (again)",
+                "Created new documentation page, still hosted at https://docs.tams.club"
+            ]
+        },
+        {
+            "v": "5.1",
+            "date": "Febuary 6th, 2022",
+            "changes": [
+                "Fixed 'Manage Resources' table on Admin page to be a cleaner data grid",
+                "Limit events to 100 days long",
+                "Reservation error messages are more clear (notes if the time or location is the issue)",
+                "Fixed weird icon flash when loading page",
+                "Fixed issue where events that end at midnight display as 'All Day'",
+                "Added text next to action bar icon buttons for readability",
+                "Added [no description] to descriptions in volunteering and club cards that have no description",
+                "Added link to original repeating event on repeating events",
+                "Added a button to go to the current week on the reservations calendar"
+            ]
+        },
+        {
+            "v": "5.0",
+            "date": "Febuary 1st, 2022",
+            "changes": [
+                "Completely overhauled events system",
+                "Removed seperate reservation add page",
+                "Added ability to make repeating events",
+                "Added ability to repeat events weekly and monthly",
+                "Repeating events are now labeled on the schedule view",
+                "Top navigation bar no longer disappears when scrolling down",
+                "Volunteering opportunities will now be open by default when creating them",
+                "Fixed issue where edit history looks janky when creating a resource",
+                "Fixed issue where edit history page would crash if accessing a deleted resource",
+                "Fixed issue where edit history entries were not deleted when admins deleted resources",
+                "Club committee cards will now properly display committee heads"
+            ]
+        },
+        {
+            "v": "4.2",
+            "date": "January 21st, 2022",
+            "changes": [
+                "Fixed events not all loading in schedule view",
+                "Fixed issue where the calendar would not move correctly to December"
+            ]
+        },
+        {
+            "v": "4.1",
+            "date": "January 14th, 2022",
+            "changes": [
+                "Fixed issue where users could no longer log in",
+                "Fixed issue where changing the dark theme would not save when page refreshes",
+                "Added missing staging text on the staging app"
+            ]
+        },
+        {
+            "v": "4.0",
+            "date": "January 14th, 2022",
+            "changes": [
+                "Completely reworked code framework so pages now load faster",
+                "Added support for unique page previews on social media and google"
+            ]
+        },
+        {
+            "v": "3.2",
+            "date": "January 12th, 2022",
+            "changes": [
+                "Removed random debugging log statements",
+                "Created a new menu theme for light mode",
+                "Updated elevation of menu bar",
+                "Darkened the EDIT HISTORY text on light mode",
+                "Added a light green background for light mode",
+                "Created a new system for logging in and profiles - see the new profile menu icon!",
+                "Created an admin dashboard",
+                "Fixed event reservation system so that users can now choose whether or not to create a reservation from an event",
+                "Added text to show whether or not an event is reserved",
+                "Fixed issue where users could schedule reservations over other reservations",
+                "Changed edit history entries to be more human readable",
+                "Changed text on events to be Signup/Deadline instead of just Signup",
+                "Fixed strange margins on volunteering display",
+                "Fixed new issue where users could set event end times to be before start times",
+                "Fixed issue where images are not deleted from the database when clubs are deleted",
+                "Fixed weird loading box bottom on the main page",
+                "Added a [No Description] label if an event has no description",
+                "Added this changelog",
+                "Removed id data from future edit history entries"
+            ]
+        },
+        {
+            "v": "3.1",
+            "date": "December 1st, 2021",
+            "changes": ["Fixed feedback form"]
+        },
+        {
+            "v": "3.0",
+            "date": "November 29, 2021",
+            "changes": [
+                "Cleaned up slow code and upgraded styling libraries for an overall smoother experience",
+                "Fixed edit form submission issues",
+                "Added catch for invalid edit history entires so it no longer crashes the site",
+                "Changing volunteering from closed to open actually works now"
+            ]
+        },
+        {
+            "v": "2.3",
+            "date": "August 29, 2021",
+            "changes": [
+                "Fixed location that images were stored in the staging app",
+                "Fixed issue where scroll bar appears illegally on the reservation calendar"
+            ]
+        },
+        {
+            "v": "2.2",
+            "date": "August 13, 2021",
+            "changes": [
+                "Added social media meta tags -- better links for social media!",
+                "Created documentation site (https://docs.tams.club)",
+                "Fixed issues with reservations and events displaying incorrectly",
+                "Adding sorting functionality to list views"
+            ]
+        },
+        {
+            "v": "2.1",
+            "date": "August 6, 2021",
+            "changes": [
+                "General improvements to user interface",
+                "Created list views and filters for resource lists",
+                "Added the ability to reserve rooms for reservations",
+                "Added ability to schedule repeating reservations",
+                "Added React Helmet to dynamically change page title/descriptions",
+                "Fixed issue where edit history does not show logged in user's name",
+                "Created /edit page where a log of all edits are displayed",
+                "Added the ability to view individual resource's edit histories",
+                "History diff now recursively shows arrays and objects that are changed"
+            ]
+        },
+        {
+            "v": "2.0",
+            "date": "July 30, 2021",
+            "changes": [
+                "Completely rewrote the entire user interface with a modern framework library (Material UI)",
+                "Cleaned up backend with routers and mongoose",
+                "Serve images from Amazon S3 at https://cdn.tams.club",
+                "Create production builds with a combination of Netlify and Docker"
+            ]
+        },
+        {
+            "v": "1.4",
+            "date": "March 29, 2021",
+            "changes": [
+                "Add text on staging app denoting its non-production status",
+                "Set default signup time to 11:59pm",
+                "Changing start time for events now perserves the previous time interval",
+                "Add button no longer expands weirdly on mobile",
+                "Fixed the width of club cover photo uploads",
+                "Added ability to edit clubs on mobile",
+                "Set dark theme automatically for first-time users who have dark theme enabled globally"
+            ]
+        },
+        {
+            "v": "1.3",
+            "date": "March 26, 2021",
+            "changes": [
+                "Dark theme added!",
+                "Wrap long event names on event display",
+                "Added a max height to event popups to prevent clipping beyond bottom of the popup"
+            ]
+        },
+        {
+            "v": "1.2",
+            "date": "March 21, 2021",
+            "changes": [
+                "Fixed info on left side of events popup",
+                "Added a minimum height for event popups",
+                "Changed media queries so that it works on mobile",
+                "Added transitions and border-radii to calendar events on hover",
+                "Cleaned up CSS code"
+            ]
+        },
+        {
+            "v": "1.1",
+            "date": "Narch 19, 2021",
+            "changes": [
+                "Fixed layering on the home page",
+                "Fix background tasks to run only once every day",
+                "Fix issue where volunteering cards are clipped and overlaid strangely",
+                "Set logo banner of clubs to 100% so they don't overflow",
+                "Fixed issue where Google account logins do not work"
+            ]
+        },
+        {
+            "v": "1.0",
+            "date": "March 7, 2021",
+            "changes": [
+                "Use set timezone of America/Chicago (for simplicity)",
+                "Added link to Google Calendar",
+                "Catch invalid ips for users and log them out automatically",
+                "Fix padding issues with club displays"
+            ]
+        }
+    ]
+}
